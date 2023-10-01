@@ -4,7 +4,7 @@ function volume_sphere() {
     const radius = parseFloat(radiusInput.value);
 
     // Check if the input is a valid number
-    if (radius >= 0) {
+    if (!(NaN) && radius >= 0) {
         // Calculate the volume of the sphere
         const volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
 
