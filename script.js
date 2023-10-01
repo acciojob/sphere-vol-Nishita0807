@@ -4,17 +4,14 @@ function volume_sphere() {
     const radius = parseFloat(radiusInput.value);
 
     // Check if the input is a valid number
-    if (!isNaN(radius) && radius >= 0) {
+    if (radius >= 0) {
         // Calculate the volume of the sphere
         const volume = (4 / 3) * Math.PI * Math.pow(radius, 3);
 
         // Display the volume in the "volume" input field
         const volumeInput = document.getElementById('volume');
-        volumeInput.value = volume// Display the volume rounded to 2 decimal places
-    } else {
-        alert('Please enter a valid positive number for the radius.');
+        volumeInput.value = volume.toFixed(4); // Display the volume rounded to 2 decimal places
     }
-
     // Prevent the form from submitting and refreshing the page
     return false;
   
